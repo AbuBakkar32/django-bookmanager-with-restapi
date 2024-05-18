@@ -1,0 +1,16 @@
+<!-- books/templates/books/book_confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Book</title>
+</head>
+<body>
+    <h1>Delete Book</h1>
+    <p>Are you sure you want to delete "{{ object.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'book_list' %}">Back to book list</a>
+</body>
+</html>
