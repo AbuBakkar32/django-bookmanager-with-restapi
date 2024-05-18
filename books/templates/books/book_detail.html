@@ -1,0 +1,16 @@
+<!-- books/templates/books/book_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.title }}</title>
+</head>
+<body>
+<h1>{{ object.title }}</h1>
+<p>Author: {{ object.author }}</p>
+<p>Published Date: {{ object.published_date }}</p>
+<p>ISBN: {{ object.isbn }}</p>
+<a href="{% url 'book_edit' object.pk %}">Edit</a>
+<a href="{% url 'book_delete' object.pk %}">Delete</a>
+<a href="{% url 'book_list' %}">Back to book list</a>
+</body>
+</html>
